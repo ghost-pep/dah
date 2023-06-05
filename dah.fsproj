@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Counter.fs" />
+    <Compile Include="Editor.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

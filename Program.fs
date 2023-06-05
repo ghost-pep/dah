@@ -13,11 +13,10 @@ type MainWindow() as this =
     inherit HostWindow()
 
     do
-        base.Title <- "Counter Example"
-        base.Height <- 400.0
-        base.Width <- 400.0
+        base.Title <- Editor.title
+        base.WindowState <- WindowState.Maximized
 
-        Elmish.Program.mkSimple Counter.init Counter.update Counter.view
+        Elmish.Program.mkSimple Editor.init Editor.update Editor.view
         |> Program.withHost this
         |> Program.withConsoleTrace
         |> Program.run
